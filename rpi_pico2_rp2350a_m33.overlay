@@ -15,7 +15,7 @@
 	chosen {
 		zephyr,console = &cdc_acm_uart0;
         	zephyr,shell-uart = &cdc_acm_uart0;
-        	zephyr,display = &lcd;
+        	zephyr,display = &lcd0;
         	zephyr,touch = &touch0;
 	};
 
@@ -33,7 +33,7 @@
 		dc-gpios = <&gpio0 21 GPIO_ACTIVE_HIGH>;
 		reset-gpios = <&gpio0 22 GPIO_ACTIVE_LOW>;
 
-		lcd: ili9341@0 {
+		lcd0: ili9341@0 {
 			compatible = "ilitek,ili9341";
 			reg = <0>;
 
